@@ -1,0 +1,11 @@
+echo -n "Sisesta reisijate arv: "
+read reisijad
+
+echo -n "Sisesta kohtade arv bussis: "
+read kohad_bussis
+
+busside_arv=$(( $reisijad / $kohad_bussis ))
+maha_jaanud_reisijad=$(( $reisijad % $kohad_bussis ))
+
+echo -n "$reisijad reisijate transportimiseks saab kasutada $busside_arv"
+echo " bussi ja $maha_jaanud_reisijad jaavad reisist ilma."
