@@ -1,0 +1,11 @@
+echo -n "Sisesta suvaline taisarv: "
+read tais
+
+jaak=$(( $tais % 2 ))
+
+if [ $jaak -eq 0 ]
+then
+  echo "$tais on paaris"
+else
+  echo "$arv on paaritu"
+fi
