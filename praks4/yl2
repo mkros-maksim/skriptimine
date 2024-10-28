@@ -1,0 +1,18 @@
+#Kusime reisijate arv
+echo -n "Sisesta reisijate arv: "
+read reisijad
+#Kusime kohtade arv
+echo -n "Sisesta kohtade arv: "
+read kohad
+#Siin arvutame kui palju bussid on vaja ja kui palju reisijad on jaanud
+busside_arv=$(( $reisijad / $kohad  ))
+maha_jaanud=$(( $reisijad % $kohad  ))
+#Seda meil on vaja, et kui meil tuleb keegi kes jai maha siis ta kaivitab edasi
+if test $maha_jaanud -gt 0
+#Kui on maha jaanud, siis on vaja busside arvule lisada +1
+then
+  busside_arv=$(( $busside_arv + 1 ))
+#See on if lopp
+fi
+#Valjendame tulemus
+echo "Kokku on vaja $busside_arv bussi"
