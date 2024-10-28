@@ -1,0 +1,9 @@
+echo -n "Sisestage ainepunktide arv:"
+read punkt
+echo -n "Sisestage nadalate arv:"
+read nadal
+tundide_arv=$(( $punkt * 26 ))
+tulemus=$(echo "scale=1; $tundide_arv/$nadal" | bc )
+tulemus=$(echo "($tulemus + 0.9)/1" | bc)
+echo $tulemus
+
