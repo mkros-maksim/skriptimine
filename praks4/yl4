@@ -1,0 +1,14 @@
+# See skript kontrollib, kas sisestatud täisarv on paaris või paaritu.
+# Kasutaja peab sisestama täpselt ühe täisarvu käsurea argumendina.
+# Kontrollime, kas argumentide arv on täpselt 1.
+if [ "$#" -ne 1 ]; then
+    echo "Käivita see skript koos arvuga, mille paarsust soovid kontrollida. Näiteks: ./yl4 3"
+    exit 1
+fi
+
+# Kontrollime, kas arv on paaris või paaritu.
+if [ $(( $1 % 2 )) -eq 0 ]; then
+    echo "Antud arv on paaris"
+else
+    echo "Antud arv on paaritu"
+fi
