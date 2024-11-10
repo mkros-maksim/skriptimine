@@ -1,0 +1,39 @@
+#!/bin/bash
+#See skript annab valida kahest variandist
+#palub skript kasutajal sisestada ühe neist valikutest ning loeb sisendi muutuja osch sisse.
+osch=0
+echo "1. Unix (Sun Os)"
+echo "2. Linux (Red Hat)"
+echo -n "Select your os choice [1 or 2]? "
+read osch
+#Kui osch väärtus on 1, käivitub esimene if-tingimus ja kuvatakse sõnum Sun OS
+if [ $osch -eq 1 ] ; then
+     echo "You Pick up Unix (Sun Os)"
+#Kui osch väärtus on 2, käivitub sisemise else-tingimuse sees olev 
+#if-tingimus ja kuvatakse sõnum Red Hat
+else #### nested if i.e. if within if ######
+       if [ $osch -eq 2 ] ; then
+             echo "You Pick up Linux (Red Hat)"
+       else
+             echo "What you don't like Unix/Linux OS."
+       fi
+fi
+#Kui osch ei ole ka 2, siis else, mis ütleb, et you don't like Unix/Linux
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
