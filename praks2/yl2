@@ -1,0 +1,11 @@
+
+#!/bin/bash
+# kasutaja tervitus
+#algus
+echo -n "Tere, "
+#muudan esimene taht suureks ja valjasta
+kasutajanimi=$(whoami)
+echo -n "${kasutajanimi^}"
+echo "!"
+#lopp
+
