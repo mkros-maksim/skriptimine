@@ -1,0 +1,10 @@
+#!/bin/bash
+# See skript kuvab kasutajale jooksva kuupäeva, kellaaja ja kalendri.
+
+# Tänane kuupäev
+echo "Täna on: $(date +'%A, %d.%m.%Y')"
+# Praegune kellaaeg
+echo "Praegune kellaaeg on: $(date +'%H:%M:%S')"
+# Jooksva kuu kalender
+echo "Käesolev kuu:"
+cal
