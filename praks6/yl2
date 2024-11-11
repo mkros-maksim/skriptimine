@@ -1,0 +1,15 @@
+#!/bin/bash
+#Skript, mis arvutab sisestatud arvu numbrite summa
+
+echo -n "Sisesta suvaline täisarv: "
+read arv
+
+# Arvutame numbrite summa, eemaldades miinusmärgi, kui see on olemas
+summa=0
+for (( num=0; num<${#arv}; num++ )); do  #i<${#arv} — tsükkel jätkub, kuni i on väiksem kui arv pikkus.
+    digit="${arv:num:1}" # lisab digit väärtuse muutujale summa
+    [ "$digit" != "-" ] && summa=$((summa + digit)) #kontrollib, kas praegune sümbol digit pole miinus
+done
+
+# Väljasta tulemus
+echo "Arvu $arv numbrite summa on $summa"
