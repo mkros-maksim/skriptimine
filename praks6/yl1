@@ -1,0 +1,12 @@
+#!/bin/bash
+# Skript arvutab 10 esimese paarisarvude summa
+
+sum=0
+
+# For-tsükkel paarisarvude summaks
+for (( num=2; num<=20; num+=2 ));
+ do
+    sum=$((sum + num))
+done
+
+echo "Arvude vahemikus 1 kuni 20 (kaasaarvatud) paarisarvude summa on: $sum"
