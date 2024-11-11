@@ -1,0 +1,21 @@
+#!/bin/bash
+# Skript, mis tuvastab, kas sisestatud arv on algarv või mitte
+
+echo -n "Sisesta suvaline arv: "
+read arv
+
+#Kontrollib, kas arv on väiksem kui 2
+if [ $arv -lt 2 ]; then #Kontrollib, kas sisestatud arv on väiksem kui 2.
+    echo "$arv - ei ole algarv"
+    exit 0
+fi
+
+#Kontrollib, kas arv on algarv
+for (( num=2; num*num<=$arv; num++ )); do #Proovib jagada sisestatud arvu kõigi arvudega alates 2-st kuni arvu ruutjuureni.
+    if [ $((arv % num)) -eq 0 ]; then #Kontrollib, kas jääk jagamisel num on null. Kui on, siis arv ei ole algarv.
+        echo "$arv - ei ole algarv"
+        exit 0
+    fi
+done
+
+echo "$arv - on algarv"
